@@ -1,0 +1,97 @@
+html {
+  box-sizing: border-box;
+}
+*, *:before, *:after {
+	box-sizing: inherit;
+}
+body {
+	font-family: 'Big Shoulders Stencil Display', cursive;
+	margin: 0;
+	padding: 0;
+	background-image: url(../img/galaxy.jpg);
+}
+.wrapper {
+	width: 80%;
+	margin: 0 auto;
+	padding: 1em;
+	display: flex;
+	flex-flow: row nowrap;
+	background-color: #efb106;
+}
+
+section {
+	flex-basis: 57%;
+	margin-right: 10%;
+}
+aside {
+	flex-basis: 33%;
+	/*that's why the map is on the right ;) */
+}
+
+p, [for="abtype"], [for="fuck"] {
+	margin: 2rem 0 0 0;
+}
+
+fieldset {
+	border: 1px black solid;
+	border-radius: 5px;
+	margin-bottom: 2rem;
+}
+
+legend {
+	font-weight: bold;
+	font-size: 1.3rem;
+	margin-top: 1.5rem;
+	margin-bottom: 1rem;
+}
+
+label {
+	display: block;
+}
+
+input {
+	border-radius: 5px;
+}
+
+textarea {
+	height: 10rem;
+	padding: 1rem;
+}
+
+select {
+	font-size: 1rem;
+}
+
+button {
+	font-size: 1rem;
+	margin: 2rem 0;
+	padding: 1rem;
+	border: none;
+	background-color: coral;
+	border-radius: 50px;
+}
+
+button:hover {
+	background-color: cyan;
+	color: darkmagenta;
+}
+
+input:not([type="radio"]):not([type="checkbox"]), textarea {
+	display: block;
+	margin-bottom: 2rem;
+	width: 20rem;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 1rem;
+	padding: 0 1rem;
+	border-radius: 5px;
+	/*:not is to declare this class to NOT select something.
+	what is between the [] is targetting an attribute */
+}
+
+
+
+
+
+
+
+

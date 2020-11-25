@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Alien Abduction Order Form</title>
+	<link href="css/forms.css" rel="stylesheet">
+	<link href="https://fonts.googleapis.com/css2?family=Big+Shoulders+Stencil+Display:wght@100&display=swap" rel="stylesheet">
+
+	<!-- For the font to work, you have to also display them using the css guides (in googlefonts, in this case) provided :) -->
+</head>
+<body>
+	<div class="wrapper">
+		<section>
+			<h1>Alien Abduction Order Form</h1>
+			<p>Fill out the form below to place an order for an alien abduction by one of our fine UFOs.</p>
+			
+			<form action="https://e3vwdl4bpd.execute-api.us-west-2.amazonaws.com/default/API2SES" method="POST">
+			<!-- This URL comes from https://frontendmasters.github.io/bootcamp/forms; in order for the form to do something :) -->
+			
+			<fieldset>
+			<!--the fieldset is used to divide the form-->
+			
+			<legend>Your contact information</legend>
+			<!--Used to describe our fieldset-->
+
+
+			<label for="name">Your name </label> 
+			
+			<!--The  for="name" value MUST MATCH with the ID of the input-->
+
+			<input type="text" id="name" name="name"> 
+			<!-- the id or name can have different names, however for data collection purposes we call these variables :) -->
+
+			<label for="phone">Phone number</label>
+			<input type="tel" id="phone" name="phone">
+			<!--type="tel" is to help people on smartphones to type numbers, otherwise it could be type="text" -->
+
+			<label for="email">Email</label>
+			<input type="email" id="email" name="email">
+
+		</fieldset>
+
+		<fieldset>
+			<legend>About your abduction </legend>
+
+			<label for="date">Requested  date</label>
+			<input type="date" id="date" name="date">
+			<!--The date input format VARIES FROM BROWSER TO BROWSER. So here it is better to code the calendar using javascript-->
+
+			<label for="qty">How many people would you like abducted?</label>
+			<input type="number" id="qty" name="qty" min="1" max="10">
+			<!--qty standing for 'quantity'-->
+			<!--in this input (number) you MUST put a range with 'min' and 'max'-->
+
+			<p>What type of UFO do you prefer?</p>
+				
+				<label>	
+					<input type="radio" name="ufotype" value="classic" checked>  
+					Classic oval UFO
+				</label>
+				<!--we put the label around the input this time so that the WHOLE SENTENCE is clickable-->
+				<!--moreover we use the input BEFORE the text so that the radio button appears before it-->	
+
+				<!--you can also pre-check a radio buttion using the value CHECKED-->
+
+				<label>	
+					<input type="radio" name="ufotype" value="starwars"> Star Wars-style Imperial cruiser
+				</label>
+
+				<label>	
+					<input type="radio" name="ufotype" value="battlestar"> Battlestar Galactica-style Viper
+				</label>
+
+				<label>	
+					<input type="radio" name="ufotype" value="borgstyle"> Borg-style cube
+				</label>
+
+				<label>
+					<input type="radio" name="ufotype" value="any"> Whatever is in the neighborhood
+				</label>
+
+				<!--After coding the radio buttons make sure to test them and that ONLY ONE is selected-->
+
+				<!--If it doesn't work then something is wrong with the value you have for NAME
+				the value for NAME must always be the same-->
+
+			 
+			<label for="abtype">What type of abduction experience do you want?</label>
+				<select id="abtype" name="abtype">
+					<option selected>Select One</option>
+
+					<!-- This first option is to be the one that appears first in the selection, and giving it a 'select' (to be selected by default -->
+
+					<!-- You may want to change the 'selected' value in case, for example, you have an option people choose a lot and you want that as default -->
+
+					<option value="tour">Tour of the solar system</option>
+					<option value="dinner">Alien dinner and discussion</option>
+					<option value="dance">Alien dance lessons</option>
+					<option value="whale">Whale watching</option>
+
+				<!--For every option there is a value-->
+				</select>
+
+				<!-- id is for the label tag -->
+				<!-- name is for backend processing -->
+				<!-- value varies. -->
+
+			<label for="fuck">Special requests:</label>
+
+			<textarea name="comments" id="fuck" placeholder="Write in me"></textarea>
+
+			<!--Textarea DOES NOT have a value-->
+
+			<!-- the PLACEHOLDER text is used in any tag (in the form) to provide a 'ghost' text (default) where people write -->
+
+
+
+		<label>
+
+			<input id="subscribe" type="checkbox" value="subscribe" name="subscribe" checked> Add me to your email list!
+
+		</label>
+
+
+		<input id="send_to" type="hidden" name="send_to" value="amaral.r.rodrigo@gmail.com">
+
+			<!-- This input type="hidden" HAS TO BE inside the Form tag -->
+			<!-- This input is for our form to be sent to us :) the code comes from https://frontendmasters.github.io/bootcamp/forms in the input type="hidden" section -->
+		
+		<button type="submit">Submit</button>
+		<!-- No ID because no label. No name because no values for the server -->
+		</fieldset>
+
+		</form>			
+		</section>
+		<aside>
+			<h3>Our Location</h3>
+			<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1411.1614370128507!2d-93.27191134226143!3d44.977751763344614!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x52b3329a75fc44b3%3A0xab6d15df00205abb!2s60+South+6th+St%2C+Minneapolis%2C+MN+55402!5e0!3m2!1sen!2sus!4v1540308714418"
+			 width="400" height="300" frameborder="0" style="border:0" allowfullscreen></iframe>
+			<address>
+				Frontend Masters &middot;
+				60 South 6th Street &middot;
+				Suite 3625 &middot;
+				Minneapolis, MN 55402
+			</address>
+		</aside>
+	</div>
+<script src="js/forms.js"></script>
+</body>
+</html>
+
+
+
+
+
